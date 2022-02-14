@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  gitea:
+    network_mode: bridge
+    image: gitea/gitea:latest
+    container_name: gitea.b2g1
+    ports:
+      - 222:22
+      - 3000:3000
+    volumes:
+      - ./gitea:/datas
